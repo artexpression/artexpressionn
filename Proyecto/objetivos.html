@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Parallax Scrolling Website|Vanilla Javascript</title>
+    <link rel="stylesheet"type="text/css"href="objetivo.css">
+  </head>
+  <body>
+    <header>
+     <a href="#" class="logo">  </a>
+      <ul>
+        <li><a href="#"> </a></li>
+       <li><a href="#">  </a></li>
+       <li><a href="#">  </a></li>
+       <li><a href="#"> </a></li>
+     </ul>
+   </header>
+   <section>
+     <img src="./imagenes/stars.png" id="stars">
+     <img src="./imagenes/moon.png" id="moon">
+      <img src="./imagenes/mountains_behind.png"id="mountains_behind">
+      <h2 id="text">Objetivos</h2>
+     
+      <img src="./imagenes/mountains_front.png"id="mountains_front">
+
+   </section>
+   <div class="sec" id="sec">
+     <h2>Objetivo general 
+
+
+</h2>
+     <p>Conocer el impacto, avance y falencias que tienen estás herramientas en los últimos años y con ello poder encontrar nuevas soluciones que puedan facilitar el manejo del dinero en Colombia un país donde falta el conocimiento sobre las tecnologías de la información.
+ </p>
+     <h2>
+objetivos específicos
+</h2>
+     <p>
+1.Analizar los avances de las principales aplicaciones bancarias en Colombia, como son Nequi, Daviplata, Movii y la aplicación más reciente Nubank.<br><br>
+
+2. Conocer cómo hacen las empresas al momento de ofrecer estos servicios a personas que no cuentan con los conocimientos necesarios y los dispositivos tecnológicos para este propósito.<br><br>
+
+
+3.Identificar los principales problemas que se presentan al momento de utilizar estás aplicaciones, conocer sus principales fallos, si contienen una interface amigable y si cumplen con las expectativas de los usuarios
+
+     </p>
+     <h2>Metodología </h2>
+     <p>Para conocer la importancia de este proyecto<br> se comienza con la revisión de la literatura luego<br> se plantea una pregunta después de ello se busca <br>información por medio de fuentes primarias <br>y secundarias, se comienza con un marco teórico <br>el cual busca dar sentido a la investigación y con ello <br>se resuelve los principales problemas de  esta mism <br> hasta poder obtener las conclusiones finales<br>
+     <img src="./imagenes/introduccion.png" class="centrar">
+
+     <h2 class="izquierda">Conclusiones </h2>
+     <p  class="izquierda">
+En Colombia se evidencia que la mayoría de las personas <br>no tienen acceso a las nuevas tecnologías de la información<br> por lo tanto para algunos es imposible el manejo de <br> estás   aplicaciones, para hacerle frente a este reto Daviplata  considero <br> darles la oportunidad mediante su antiguo celular por medio del <br> menú  de opciones las personas pueden hacer  las transferencias que <br> necesitan, para los dispositivos modernos las personas comentan que existen <br> gran variedad de  fallas que no permiten que la experiencia <br> se vea fluida,  lo cual complica la confianza de los <br> usuarios al momento de utilizarlas por lo   que prefieren hacer <br>uso de "antiguos mecanismos". El avance que han tenido estás <br> aplicaciones ha sido alto pero aún les falta camino ya <br> que no muestran estabilidad en sus procesos lo cual hacen <br> que sean intermitentes y en algunos momentos no funcionen, esto <br>por falta de servidores, problemas en el código fuente y exceso de usuarios.
+  
+</p>
+<a href="ultima.html" id="btn">Referencias</a>
+   </div> </p>
+
+
+   <script >
+     let stars = document.getElementById('stars');
+     let moon = document.getElementById('moon');
+     let mountains_behind = document.getElementById('mountains_behind');
+     let text = document.getElementById('text');
+     let btn = document.getElementById('btn');
+     let mountains_front = document.getElementById('mountains_front');
+     let header = document.querySelector('header');
+
+     window.addEventListener('scroll',function(){
+      let value=window.scrollY;
+      stars.style.left= value * 0.25+ 'px';
+      moon.style.top = value * 1.05 + 'px';
+      mountains_behind.style.top = value * 0.5 + 'px';
+      mountains_front.style.top = value * 0 + 'px';
+      text.style.marginRight = value * 4 + 'px';
+      text.style.marginTop = value * 1.5 + 'px';
+      header.style.top = value * 0.5 + 'px';
+    })
+
+
+
+
+   </script>
+  </body>
+</html>
